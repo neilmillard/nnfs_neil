@@ -1,8 +1,8 @@
 import nnfs
 from nnfs.datasets import spiral_data
 
-import Activation
-import Layer
+import activation
+import layer
 
 
 def print_hi(name):
@@ -15,11 +15,11 @@ def spiral():
     nnfs.init()
     X, y = spiral_data(samples=100, classes=3)
 
-    dense1 = Layer.Dense(2, 3)
-    activation1 = Activation.ReLU()
+    dense1 = layer.Dense(2, 3)
+    activation1 = activation.ReLU()
 
-    dense2 = Layer.Dense(3, 3)
-    activation2 = Activation.Softmax()
+    dense2 = layer.Dense(3, 3)
+    activation2 = activation.Softmax()
 
     dense1.forward(X)
     activation1.forward(dense1.output)
