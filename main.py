@@ -3,6 +3,7 @@ from nnfs.datasets import spiral_data
 
 import activation
 import layer
+from loss import CategoricalCrossentropy
 
 
 def print_hi(name):
@@ -28,6 +29,11 @@ def spiral():
     activation2.forward(dense2.output)
 
     print(activation2.output[:5])
+
+    loss_function = CategoricalCrossentropy()
+    loss = loss_function.calculate(activation2.output, y)
+
+    print("Loss:", loss)
 
 
 # Press the green button in the gutter to run the script.

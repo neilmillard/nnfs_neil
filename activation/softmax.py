@@ -2,6 +2,11 @@ import numpy as np
 
 
 class Softmax:
+    """
+    The softmax function, also known as softargmax or normalized exponential function,
+    converts a vector of K real numbers into a probability distribution of K possible outcomes.
+    This data is used to train a network under 'loss log' or 'cross-entropy'
+    """
     def __init__(self):
         self.output = []
 
