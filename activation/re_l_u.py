@@ -11,3 +11,6 @@ class ReLU:
 
     def forward(self, inputs):
         self.output = np.maximum(0, inputs)
+
+    def backward(self, outputs):
+        return outputs > 0
